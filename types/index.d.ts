@@ -1,9 +1,13 @@
 import Vue, { ComponentOptions, PluginFunction, PluginObject } from 'vue'
 
-export interface VueDebuggerPluginOptions {}
+export interface VueDebuggerPluginOptions {
+  include?: string[]
+  exclude?: string[]
+}
 
 export class VueDebuggerPlugin
-  implements PluginObject<VueDebuggerPluginOptions> {
+  implements PluginObject<VueDebuggerPluginOptions>
+{
   install: PluginFunction<VueDebuggerPluginOptions>
 }
 
